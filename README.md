@@ -33,7 +33,69 @@ git pull
 
 Ta repozitorij vsebuje zbirko Jupyter Notebookov, ki vas naučijo uporabljati Planet Insights Platform.
 
+## Priprava okolja Python
 
+Namestite Python
+
+* [Anaconda Python 3](https://www.anaconda.com/products/distribution). Lahko za Windows, macOS ali Linux.
+* [GitHub - conda-forge/miniforge: A conda-forge distribution.](https://github.com/conda-forge/miniforge). 
+
+Miniforge je lahka distribucija orodja Conda, ki se uporablja za upravljanje Python paketov in virtualnih okolij. Privzeto uporablja repozitorij conda-forge, kjer so odprtokodni in pogosto posodobljeni paketi. Pogosto se uporablja kot manjša in bolj odprtokodna alternativa Anacondi ali Minicondi. Če niste prepričani, katero različico izbrati, je Miniforge dobra izbira, saj je hitra, enostavna za uporabo in ima široko podporo paketov.
+
+Če uporabljate Miniforge, lahko ukaz `conda` vedno zamenjate z `mamba`. Mamba je veliko hitrejša za upravljanje okolij in nameščanje paketov. Mamba je še posebej priporočljiva, če imate veliko paketov ali pogosto posodabljate okolja. Njen privzet kanal je `conda-forge`, ki je zelo zanesljiv in pogosto posodobljen, zato ni potrebe po dodatnem nastavljanju kanalov.
+
+Vedno uporabljajte ukazno vrstico (Windows) ali terminal (macOS/Linux), ki vsebuje condo ali mambo, to je `Anaconda Powershell Prompt` ali `Miniforge Prompt`. Preverite namestitev in delovanje Conda/Mamba z naslednjimi ukazi:
+
+```powershell
+conda --version
+conda env list
+```
+
+Premaknite se v mapo, kjer je datoteka `environment.yml`, recimo `~/Python/planet-si`.
+
+```powershell
+cd ~/Python/planet-si
+```
+
+Preverite trenutne nastavitve okolij in kanalov.
+
+```powershell
+conda config --show envs_dirs
+conda config --show channels◘
+```
+
+Če uporabljate Anaconda, dodajte kanal `conda-forge` in nastavite prioriteto kanalov na `strict`, da zagotovite, da se paketi namestijo iz `conda-forge`, kjer so pogosto bolj posodobljeni in združljivi z drugimi paketi. Če uporabljate Miniforge, je ta korak že opravljen, saj je `conda-forge` privzeti kanal.
+
+```powershell
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+```
+
+Ustvarite novo okolje z imenom `planeteo` in namestite Python 3.12. To je priporočljivo, saj omogoča boljšo organizacijo in ločevanje projektov. Vsako okolje lahko vsebuje različne različice paketov, kar je koristno za preprečevanje konfliktov med projekti.
+
+```powershell
+conda env create -f environment.yml
+```
+
+Aktivirajte okolje `planeteo`, da boste lahko uporabljali nameščene pakete in knjižnice. Aktivacija okolja je ključna, saj omogoča, da se ukazi in programi izvajajo znotraj tega okolja, kar zagotavlja, da uporabljate prave različice paketov. Preverite delovanje okolja z zagonom Jupyter Lab:
+
+```powershell
+conda activate planeteo
+jupyter lab
+```
+
+Če naletite na težave, posodobite knjižnice v okolju `planeteo` z naslednjim ukazom, vendar boste s tem dobili okolje, ki ni več enako kot v `environment.yml`. Če želite ohraniti okolje usklajeno z `environment.yml`, uporabite ukaz za posodobitev okolja:
+
+```powershell
+conda activate planeteo
+conda update --all
+```
+
+Če okolje že obstaja in želite samo namestiti manjkajoče knjižnice, uporabite:
+
+```powershell
+conda env update --file environment.yml --prune
+```
 
 ## Avtentikacija
 
@@ -47,8 +109,8 @@ Drugi Notebooki uporabljajo avtentikacijo s Planet API ključem. API ključ najd
 
 API ključ lahko na sistemu izvozite kot okoljsko spremenljivko:
 
-```bash
-export PL_API_KEY="YOUR-API-KEY"
+```powershell
+$env:PL_API_KEY="YOUR-API-KEY"
 ```
 
 Če želite, da je API ključ trajno nastavljen (shranjen kot ```PL_API_KEY```), dodajte ukaz ```export``` v datoteko ```~/.bashrc``` ali ```~/.zshrc```. 
