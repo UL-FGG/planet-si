@@ -107,13 +107,20 @@ Nekateri Notebooki uporabljajo neposredno avtentikacijo z vašim Planet računom
 
 Drugi Notebooki uporabljajo avtentikacijo s Planet API ključem. API ključ najdete na strani z nastavitvami računa [Account ・ Planet Insights Platform](https://insights.planet.com/account/#/settings).
 
-API ključ lahko na sistemu izvozite kot okoljsko spremenljivko:
+API ključ lahko na sistemu izvozite kot okoljsko spremenljivko. Prva varinata naredi to za trenutno sejo terminala, druga pa trajno nastavi spremenljivko v vašem sistemu.
 
 ```powershell
-$env:PL_API_KEY="YOUR-API-KEY"
+# trenutna seja terminala
+$env:PL_API_KEY = "vaš_api_ključ"
+# trajno nastavi spremenljivko v sistemu
+[System.Environment]::SetEnvironmentVariable("PL_API_KEY","vaš_api_ključ","User")
 ```
 
-Če želite, da je API ključ trajno nastavljen (shranjen kot ```PL_API_KEY```), dodajte ukaz ```export``` v datoteko ```~/.bashrc``` ali ```~/.zshrc```. 
+Preverite ali je API ključ pravilno nastavljen.
+
+```powershell
+echo $env:PL_API_KEY
+```
 
 V Pythonu API ključ nastavimo v spremenljivko ```PLANET_API_KEY``` iz okoljske spremenljivke, da ga lahko uporabljamo pri API zahtevkih:
 
