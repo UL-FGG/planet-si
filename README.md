@@ -37,6 +37,7 @@ Ta repozitorij vsebuje zbirko Jupyter Notebookov, ki vas naučijo uporabljati Pl
 * [Iskanje in prenos podatkov PlanetScope](planet_iskanje_prenos.ipynb)
 * [Opazovanje vodostaja s PlanetScope podatki](planet_opazovanje_voda.ipynb)
 * [Analiza kmetijskih površin z uporabo časovnih vrst indeksov](planet_indeksi_kmetijstvo.ipynb)
+* [Klasifikacija kmetijskih površin z uporabo časovnih vrst indeksov](planet_klasifikacija_kmetijstvo.ipynb)
 
 ## Priprava okolja Python
 
