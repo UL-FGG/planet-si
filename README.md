@@ -33,6 +33,11 @@ git pull
 
 Ta repozitorij vsebuje zbirko Jupyter Notebookov, ki vas naučijo uporabljati Planet Insights Platform.
 
+* [Iskanje podatkov izbranega območja](planet_iskanje_aoi.ipynb)
+* [Iskanje in prenos podatkov PlanetScope](planet_iskanje_prenos.ipynb)
+* [Opazovanje vodostaja s PlanetScope podatki](planet_opazovanje_voda.ipynb)
+* [Analiza kmetijskih površin z uporabo časovnih vrst indeksov](planet_indeksi_kmetijstvo.ipynb)
+
 ## Priprava okolja Python
 
 Namestite Python
@@ -155,7 +160,6 @@ if not config.sh_client_id or not config.sh_client_secret:
 else:
     print(f"Uporaba poverilnic, shranjenih tukaj: {SHConfig.get_config_location()}")
 ```
-
 
 ## Avtorske pravice
 
