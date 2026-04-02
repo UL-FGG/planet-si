@@ -31,13 +31,19 @@ git pull
 
 ## Kazalo Notebookov
 
-Ta repozitorij vsebuje zbirko Jupyter Notebookov, ki vas naučijo uporabljati Planet Insights Platform.
+Ta repozitorij vsebuje zbirko Jupyter Notebookov za uporabo platforme Planet Insights.
 
 * [Iskanje podatkov izbranega območja](planet_iskanje_aoi.ipynb)
 * [Iskanje in prenos podatkov PlanetScope](planet_iskanje_prenos.ipynb)
+* [Iskanje podatkov PlanetScope in ustvarjanje naročila](planet_iskanje_narocilo.ipynb)
 * [Opazovanje vodostaja s PlanetScope podatki](planet_opazovanje_voda.ipynb)
 * [Analiza kmetijskih površin z uporabo časovnih vrst indeksov](planet_indeksi_kmetijstvo.ipynb)
-* [Klasifikacija kmetijskih površin z uporabo časovnih vrst indeksov](planet_klasifikacija_kmetijstvo.ipynb)
+* [Analiza kmetijskih površin z uporabo časovnih vrst indeksov](planet_klasifikacija_kmetijstvo.ipynb)
+* [Opazovanje vodostaja s PlanetScope podatki](planet_opazovanje_voda.ipynb)
+* [Planet Subscription (korak za korakom)](planet_narocnine_navodila.ipynb)
+* [Ustvarjanje PlanetScope naročnine v eno kolekcijo](planet_narocnine_priprava.ipynb)
+* [Spremljanje vseh Planet naročnin](planet_narocnine_spremljanje.ipynb)
+* [Opazovanje požara s PlanetScope podatki](planet_opazovanje_pozara.ipynb)
 
 ## Priprava okolja Python
 
@@ -161,6 +167,22 @@ if not config.sh_client_id or not config.sh_client_secret:
 else:
     print(f"Uporaba poverilnic, shranjenih tukaj: {SHConfig.get_config_location()}")
 ```
+
+## Prispevek
+
+Prispevki k temu repozitoriju so dobrodošli.
+
+## Avtorji
+
+* [Krištof Oštir](https://github.com/krostir)
+* [Ana Potočnik Buhvald](https://github.com/anapot)
+* [Planet Labs](https://github.com/planetlabs)
+
+## Zahvala
+
+Zahvaljujemo se Planet Labs, Inc. za razvoj in vzdrževanje platforme Planet Insights ter za deljenje teh Notebookov z javnostjo. Hvala tudi skupnosti Geo Slovenija za podporo.
+
+Razvoj je financirala Javna agencija za znanstvenoraziskovalno in inovacijsko dejavnost Republike Slovenije v okviru programa št. P2-0406 Opazovanje Zemlje in geoinformatika ter projekta GC-0006 Geoprostorske informacijske tehnologije za odporno in trajnostno družbo.
 
 ## Avtorske pravice
 
