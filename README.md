@@ -33,16 +33,21 @@ git pull
 
 Ta repozitorij vsebuje zbirko Jupyter Notebookov za uporabo platforme Planet Insights.
 
+Dostop do podatkov:
+
 * [Iskanje podatkov izbranega območja](planet_iskanje_aoi.ipynb)
 * [Iskanje in prenos podatkov PlanetScope](planet_iskanje_prenos.ipynb)
 * [Iskanje podatkov PlanetScope in ustvarjanje naročila](planet_iskanje_narocilo.ipynb)
 * [Opazovanje vodostaja s PlanetScope podatki](planet_opazovanje_voda.ipynb)
-* [Analiza kmetijskih površin z uporabo časovnih vrst indeksov](planet_indeksi_kmetijstvo.ipynb)
-* [Analiza kmetijskih površin z uporabo časovnih vrst indeksov](planet_klasifikacija_kmetijstvo.ipynb)
-* [Opazovanje vodostaja s PlanetScope podatki](planet_opazovanje_voda.ipynb)
 * [Planet Subscription (korak za korakom)](planet_narocnine_navodila.ipynb)
 * [Ustvarjanje PlanetScope naročnine v eno kolekcijo](planet_narocnine_priprava.ipynb)
 * [Spremljanje vseh Planet naročnin](planet_narocnine_spremljanje.ipynb)
+
+Aplikacije:
+
+* [Analiza kmetijskih površin z uporabo časovnih vrst indeksov](planet_indeksi_kmetijstvo.ipynb)
+* [Klasifikacija kmetijskih površin z uporabo časovnih vrst indeksov](planet_klasifikacija_kmetijstvo.ipynb)
+* [Opazovanje vodostaja s PlanetScope podatki](planet_opazovanje_voda.ipynb)
 * [Opazovanje požara s PlanetScope podatki](planet_opazovanje_pozara.ipynb)
 
 ## Priprava okolja Python
